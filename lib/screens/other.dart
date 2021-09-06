@@ -12,7 +12,14 @@ class OtherScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Screen was clicked ${_counterController.counter.value} times'),
-          ElevatedButton(onPressed: () {}, child: Text('Open Other Screen')),
+          SizedBox(
+            height: 10,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Get.back();
+              },
+              child: Text('Open Other Screen')),
         ],
       ),
     );
