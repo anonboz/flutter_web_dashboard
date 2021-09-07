@@ -1,22 +1,30 @@
-import 'package:flutter_web_dashboard/screens/home.dart';
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/layout.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      //to change screen without using build context
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Dash',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
+          scaffoldBackgroundColor: Colors.white,
+          textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
+              .apply(bodyColor: Colors.black),
+          pageTransitionsTheme: PageTransitionsTheme(builders: {
+            TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+            TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+          }),
+          primaryColor: Colors.blue),
+      home: SiteLayout(),
     );
   }
 }
