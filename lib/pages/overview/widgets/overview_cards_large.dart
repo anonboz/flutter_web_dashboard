@@ -42,7 +42,7 @@ class OverviewCardLargeScreen extends StatelessWidget {
         ),
         InfoCard(
           title: "Scheduled deliveries",
-          value: "7",
+          value: "32",
           // isActive: true,
           onTap: () {},
           topColor: Colors.purple,
