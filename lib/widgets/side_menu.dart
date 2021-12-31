@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/controllers.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
 import 'package:flutter_web_dashboard/helpers/responsiveness.dart';
+import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
 import 'package:flutter_web_dashboard/routing/routes.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:flutter_web_dashboard/widgets/side_menu_item.dart';
@@ -62,9 +63,12 @@ class SideMenu extends StatelessWidget {
                       itemName:
                           item == AuthenticationPageRoute ? "Log out" : item,
                       onTap: () {
+                        // Global navigation here
                         if (item == AuthenticationPageRoute) {
                           // TODO:: go to authentication page
+                          Get.offAll(() => AuthenticationPage());
                         }
+                        // Local navigation down here
                         if (!menuController.isActive(item)) {
                           menuController.changeActiveItemTo(item);
                           if (ResponsiveWidget.isSmallScreen(context))
