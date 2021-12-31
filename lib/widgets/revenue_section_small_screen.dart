@@ -10,7 +10,7 @@ class RevenueSectionSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30),
+      padding: EdgeInsets.all(24),
       margin: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
           color: Colors.white,
@@ -61,7 +61,7 @@ class RevenueSectionSmall extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Row(
                   children: [
@@ -70,7 +70,7 @@ class RevenueSectionSmall extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
                 ),
               ],
             ),

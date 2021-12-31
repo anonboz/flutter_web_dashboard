@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
 
@@ -20,7 +19,10 @@ class RevenueInfo extends StatelessWidget {
               style: TextStyle(color: lightGrey, fontSize: 16)),
           TextSpan(
               text: "\$ $amount ",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24)),
         ]),
       ),
     );
