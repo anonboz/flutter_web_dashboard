@@ -33,7 +33,6 @@ class MenuController extends GetxController {
       default:
         return _customIcon(Icons.exit_to_app, itemName);
     }
-    ;
   }
 
   Widget _customIcon(IconData icon, String itemName) => isActive(itemName)
